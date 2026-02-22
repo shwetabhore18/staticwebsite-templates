@@ -35,14 +35,14 @@ copy public ip and check on browser
 
 ## NOTE:
 ```bash
-    ubuntu default root for nginx is /var/ww/html
+    ubuntu default root for nginx is **/var/ww/html**
     also nginx has /usr/share/nginx/html but ubuntu does not use this depending on the 
-    installation "ubuntu (apt install nginx) uses /var/www/html<br>
+    installation **ubuntu (apt install nginx) uses /var/www/html**
 ```
 ---
 
 ``` bash
-    if we want we can change the location to server nginx from /usr/share/nginx/html
-    edit vim /etc/nginx/sites-available/default  change -> root /usr/share/nginx/html;
-    it will change the root location for nginx <br>
+    if we want we can **change the location** to server nginx from /usr/share/nginx/html
+    edit **vim /etc/nginx/sites-available/default**  change -> **root /usr/share/nginx/html;**
+    it will change the root location for nginx
 ```
