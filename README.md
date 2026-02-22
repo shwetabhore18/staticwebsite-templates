@@ -3,10 +3,10 @@
 ## 1. Launch EC2 (Ubuntu)
 
 ## 2. Install Nginx
-sudo apt update
-sudo apt install nginx -y
-systemctl start nginx
-systemctl enable nginx
+sudo apt update<br>
+sudo apt install nginx -y<br>
+systemctl start nginx<br>
+systemctl enable nginx<br>
 systemctl status nginx
 
 ## 3. Clone Repository
