@@ -1,5 +1,8 @@
 # Static Website Deployment on EC2 (Nginx web server)
 
+
+# Deployment on Ubuntu (Nginx)
+
 ## 1. Launch EC2 (Ubuntu)
 
 ## 2. Install Nginx
@@ -62,26 +65,19 @@ root /usr/share/nginx/html;
 
 # Deployment on Amazon Linux (Nginx)
 
+## 1. Launch EC2 (Amazon Linux)
+
 ## 1. Install Nginx
 
-### Amazon Linux 2
+### Amazon Linux 
 
 ```bash
 sudo yum update -y
-sudo amazon-linux-extras install nginx1 -y
+sudo yum install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
+sudo systemctl status nginx
 ```
-
-### Amazon Linux 2023
-
-```bash
-sudo dnf install nginx -y
-sudo systemctl start nginx
-sudo systemctl enable nginx
-```
-
----
 
 ## 2. Default Nginx Root Directory
 
@@ -107,8 +103,16 @@ sudo rm -rf /usr/share/nginx/html/*
 Copy website files (example: coffee template):
 
 ```bash
-sudo cp -r ~/staticwebsite-templates/coffee/* /usr/share/nginx/html/
+you have to present in the root directory
+sudo cp -r /staticwebsite-templates/yoga/* /usr/share/nginx/html/
 sudo systemctl restart nginx
+OR 
+cd /usr/share/nginx/html/
+cp -r ~/staticwebsite-templates/yoga/* .
 ```
+
+## Website Output Screenshot
+
+<img src="images/yoga_output.png" width="600">
 
 Now open your EC2 Public IP in browser.
