@@ -67,7 +67,7 @@ root /usr/share/nginx/html;
 
 ## 1. Launch EC2 (Amazon Linux)
 
-## 1. Install Nginx
+## 2. Install Nginx
 
 ### Amazon Linux 
 
@@ -79,7 +79,7 @@ sudo systemctl enable nginx
 sudo systemctl status nginx
 ```
 
-## 2. Default Nginx Root Directory
+## 3. Default Nginx Root Directory
 
 On Amazon Linux, the default root directory is:
 
@@ -87,7 +87,7 @@ On Amazon Linux, the default root directory is:
 
 ---
 
-## 3. Deploy Website
+## 4. Deploy Website
 
 ```bash
 cd ~
@@ -113,6 +113,68 @@ cp -r ~/staticwebsite-templates/yoga/* .
 
 ## Website Output Screenshot
 
+Now open your EC2 Public IP in browser.
+
 <img src="images/yoga_output.png" width="600">
 
-Now open your EC2 Public IP in browser.
+
+---
+
+# 🖥️ Deployment on Apache WebServer using Ubuntu
+
+## 1. Launch EC2 (Ubuntu)
+
+## 2. Install Apache
+
+```bash
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo systemctl status apache2
+check using public Ip 'it will show default apache page'
+```
+
+---
+
+## 3. Default Root Directory (Apache -> Ubuntu)
+
+Apache default root directory on Ubuntu:
+
+`/var/www/html`
+
+Apache Package name on Ubuntu:
+
+`apache2`
+
+---
+
+## 3. Deploy Website
+
+Clone repository:
+
+```bash
+cd ~
+git clone https://github.com/shwetabhore18/staticwebsite-templates.git
+```
+
+Remove default Apache page:
+
+```bash
+sudo rm -rf /var/www/html/*
+```
+
+Copy website files (example: medical template):
+
+```bash
+sudo cp -r ~/staticwebsite-templates/medical/* /var/www/html/
+```
+
+Restart Apache:
+
+```bash
+sudo systemctl restart apache2
+```
+Now open your EC2 Public IP in the browser.
+
+<img src="images/medical_output.png" width="600">
