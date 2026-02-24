@@ -1,7 +1,7 @@
-# Static Website Deployment on EC2 (Nginx web server)
+# 🖥️ Static Website Deployment Using EC2 
 
 
-# Deployment on Ubuntu (Nginx)
+# Deployment on Nginx Webserver using (Ubuntu)
 
 ## 1. Launch EC2 (Ubuntu)
 
@@ -63,7 +63,7 @@ root /usr/share/nginx/html;
 
 ---
 
-# Deployment on Amazon Linux (Nginx)
+# 🖥️ Deployment on Nginx Webserver using (Amazon Linux)
 
 ## 1. Launch EC2 (Amazon Linux)
 
@@ -120,7 +120,7 @@ Now open your EC2 Public IP in browser.
 
 ---
 
-# 🖥️ Deployment on Apache WebServer using Ubuntu
+# 🖥️ Deployment on Apache WebServer using (Ubuntu)
 
 ## 1. Launch EC2 (Ubuntu)
 
@@ -181,7 +181,7 @@ Now open your EC2 Public IP in the browser.
 
 ---
 
-# 🖥️ Deployment on Apache WebServer using Amazon Linux
+# 🖥️ Deployment on Apache WebServer using (Amazon Linux)
 
 ## 📌 Prerequisites
 
@@ -283,6 +283,7 @@ Now open your EC2 Public IP in browser.
 |------------------|--------------------|
 | Ubuntu           | `apache2`          |
 | Amazon Linux     | `httpd`            |
+
 
 ```bash
 default root directory for both is -> **/var/www/html/**
