@@ -52,3 +52,7 @@ Then change:
 ```bash
 root /usr/share/nginx/html;
 ```
+
+## Website Output Screenshot
+
+<img src="images/coffee_output.png" width="600">
