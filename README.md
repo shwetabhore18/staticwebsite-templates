@@ -178,3 +178,112 @@ sudo systemctl restart apache2
 Now open your EC2 Public IP in the browser.
 
 <img src="images/medical_output.png" width="600">
+
+---
+
+# 🖥️ Deployment on Apache WebServer using Amazon Linux
+
+## 📌 Prerequisites
+
+- Amazon Linux EC2 Instance
+- Security Group allowing HTTP (Port 80)
+- Git installed if not 
+- yum install git
+
+---
+
+## 1. Launch EC2 (Amazon Linux)
+
+## 2: Install Apache (httpd)
+
+```bash
+sudo yum update -y
+sudo yum install httpd -y
+```
+
+Start and enable Apache:
+
+```bash
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl status httpd
+```
+
+---
+
+## 3: Install Git (if not installed)
+
+```bash
+sudo yum install git -y
+```
+
+---
+
+## 4. Default Root Directory (Apache -> Amazon Linux)
+
+Apache default root directory on Amazon Linux:
+
+`/var/www/html`
+
+Apache Package name on Amazon Linux:
+
+`httpd`
+
+---
+
+## 5: Clone Repository
+
+```bash
+cd ~
+git clone https://github.com/shwetabhore18/staticwebsite-templates.git
+```
+
+---
+
+## 6: Remove Default Apache Files
+
+```bash
+sudo rm -rf /var/www/html/*
+```
+
+---
+
+## 7: Deploy Website Files
+
+Example: Tea Template
+
+```bash
+sudo cp -r ~/staticwebsite-templates/tea/* /var/www/html/
+```
+
+---
+
+## 8: Restart Apache
+
+```bash
+sudo systemctl restart httpd
+```
+
+---
+Now open your EC2 Public IP in the browser.
+
+---
+
+## Website Output Screenshot
+
+Now open your EC2 Public IP in browser.
+
+<img src="images/tea_output.png" width="600">
+
+---
+## NOTE:
+## 📝 Service Name Difference
+
+| Operating System | Apache Service Name |
+|------------------|--------------------|
+| Ubuntu           | `apache2`          |
+| Amazon Linux     | `httpd`            |
+
+```bash
+default root directory for both is -> **/var/www/html/**
+```
